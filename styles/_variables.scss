@@ -1,0 +1,63 @@
+//global
+$default-bg: white;
+$default-color: black;
+$default-box-shadow-blur: 10px;
+$default-box-shadow-color: rgba(#000, 0.1);
+$default-transition: all 0.3s;
+$default-cursor: pointer;
+
+$body-bg: #f8f8f8;
+//title
+$main-title-font-size: 2rem;
+$main-title-font-weight: 500;
+$main-title-margin: 8rem;
+
+//holidays-list
+
+$holidays-list-padding: 4rem;
+$holidays-list-margin: 4rem;
+
+//holiday-item
+$holiday-item-width: 300px;
+$holiday-item-height: 200px;
+$holiday-item-title-font-size: 20px;
+$holiday-item-date-font-size: 16px;
+$holiday-item-title-font-color: #feaa3f;
+$holiday-item-date-weekday-font-size: 14px;
+$holiday-item-details-font-size: 12px;
+$holiday-item-date-font-color: #d7d8d9;
+$holiday-item-title-font-weight: 500;
+$holiday-item-date-font-weight: 400;
+$holiday-item-details-font-weight: 300;
+$holiday-item-border-radius: 20px;
+$holiday-item-margin: 2rem;
+$holiday-item-padding: 1rem;
+$holiday-item-text-margin: 1rem;
+
+// nav
+$nav-margin: 3rem;
+$nav-link-font-size: 15px;
+$nav-link-font-weight: 500;
+$nav-link-font-color: #d7d8d9;
+$nav-link-margin: 3rem;
+$nav-logo-size: 50px;
+
+// input
+$input-width: 200px;
+$input-height: 30px;
+$input-border-color: #feaa3f;
+$input-border-size: 1px;
+$input-border-style: solid;
+$input-border-radius: 4px;
+$input-font-color: #d7d8d9;
+$input-font-weight: 400;
+
+//button
+$btn-width: 60px;
+$btn-height: 30px;
+$btn-border-size: 1px;
+$btn-border-color: #feaa3f;
+$btn-border-style: solid;
+$btn-border-radius: 4px;
+$btn-font-color: #d7d8d9;
+$btn-padding: 0.5rem;

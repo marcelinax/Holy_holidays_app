@@ -1,0 +1,95 @@
+@import "variables";
+
+@mixin default-box-shadow {
+  box-shadow: 0 0 $default-box-shadow-blur $default-box-shadow-color;
+}
+@mixin default-padding-margin {
+  padding: 0;
+  margin: 0;
+}
+DWbbpzpewnie @mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin holiday-item {
+  width: $holiday-item-width;
+  height: $holiday-item-height;
+  background-color: $default-bg;
+  border-radius: $holiday-item-border-radius;
+  margin-right: $holiday-item-margin;
+  margin-bottom: $holiday-item-margin;
+  padding: $holiday-item-padding;
+}
+@mixin holiday-list {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: $holidays-list-bg;
+}
+@mixin nav-size {
+  height: 100%;
+  width: calc(100% - #{$nav-margin}* 2);
+}
+@mixin nav-link {
+  font-size: $nav-link-font-size;
+  font-weight: $nav-link-font-weight;
+  color: $nav-link-font-color;
+}
+@mixin nav-logo {
+  width: $nav-logo-size;
+  height: $nav-logo-size;
+}
+@mixin holidays-list-size {
+  height: calc(100vh - #{$holidays-list-margin}* 2 - 70px);
+  width: calc(100% - #{$holidays-list-margin}* 2);
+  overflow-y: auto;
+}
+@mixin main-title {
+  font-size: $main-title-font-size;
+  font-weight: $main-title-font-weight;
+  margin-left: $main-title-margin;
+  margin-top: 3rem;
+}
+@mixin link-hover {
+  content: "";
+  background-color: #feaa3f;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  left: 0;
+}
+@mixin input {
+  width: $input-width;
+  height: $input-height;
+  border: $input-border-size $input-border-style $input-border-color;
+  padding: 0.1rem 1rem;
+  border-radius: $input-border-radius;
+  color: $input-font-color;
+  font-weight: $input-font-weight;
+  cursor: $default-cursor;
+}
+@mixin button {
+  width: $btn-width;
+  height: $btn-height;
+  //   border: $btn-border-size $btn-border-style $btn-border-color;
+  padding: $btn-padding;
+  border-radius: $btn-border-radius;
+  margin-left: 2rem;
+  background-color: $default-bg;
+  color: $btn-font-color;
+  border: none;
+  outline: none;
+  cursor: $default-cursor;
+  transition: $default-transition;
+}
+@mixin button-hover {
+  transform: translateX(-0.5rem);
+  border-bottom: 1px solid #feaa3f;
+  color: #feaa3f;
+}

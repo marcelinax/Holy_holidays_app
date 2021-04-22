@@ -22,20 +22,43 @@ class Holiday {
     const holidayItem = document.createElement("div");
     holidayItem.classList.add("holiday-item");
     let content = `
+     <div class='holiday-item-main-box'>
       <h3 class='holiday-item-title'>${this.title}</h3>
-      <h5 class='holiday-item-date'>${this.date} ${this.weekday}<h5>
-      <p>${this.rank} ${this.color} ${this.season} ${this.seasonWeek}</p>
+      <h5 class='holiday-item-date'>${this.date}</h5>
+      <h6 class='holiday-item-date-weekday'>${this.weekday}</h6>
+      </div>
+      <div class='holiday-item-details-box'>
+      <p class='holiday-item-rank'><strong>Rank:</strong> ${this.rank}</p>
+       <p class='holiday-item-season'><strong>Season:</strong> ${this.season}</p>
+      <p class='holiday-item-season-week'><strong>Season week:</strong> ${this.seasonWeek}</p>
+      </div>
       `;
 
     holidayItem.innerHTML = content;
+
     document.querySelector(".holidays-list").appendChild(holidayItem);
+    holidayItem.style.borderColor = this.getColorForHoliday(this.color);
+  }
+  getColorForHoliday(color) {
+    const holidayItem = document.querySelector(".holiday-item");
+
+    switch (color) {
+      case "green":
+        return "green";
+      case "violet":
+        return "violet";
+      case "white":
+        return "white";
+      case "red":
+        return "red";
+    }
   }
 }
 
 class Holidays {
   constructor() {
     this.getInfoForHolidays();
-    this.initDupa();
+    this.initShowHolidays();
   }
   getDate() {
     let dateValue = document.querySelector("#date").value;
@@ -65,12 +88,25 @@ class Holidays {
     });
   }
 
-  initDupa() {
-    document.getElementById("add-btn").addEventListener("click", () => {
+  initShowHolidays() {
+    document.getElementById("find-btn").addEventListener("click", () => {
       document.querySelector(".holidays-list").innerHTML = "";
       this.getInfoForHolidays();
     });
   }
 }
 
+class UI {
+  constructor() {
+    this.showInput();
+  }
+  showInput() {
+    document.getElementById("find-holiday").addEventListener("click", () => {
+      document
+        .querySelector(".date-input-box")
+        .classList.toggle("date-input-box--active");
+    });
+  }
+}
 const holidays = new Holidays();
+const ui = new UI();

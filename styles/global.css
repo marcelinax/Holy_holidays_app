@@ -1,1 +1,242 @@
-/* No CSS *//*# sourceMappingURL=global.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+header {
+  height: 70px;
+  background-color: white;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: calc(100% - 3rem* 2);
+  margin: 0 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .nav .logo {
+  width: 50px;
+  height: 50px;
+}
+
+header .nav .link-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+header .nav .link-box .link {
+  font-size: 15px;
+  font-weight: 500;
+  color: #d7d8d9;
+  position: relative;
+}
+
+header .nav .link-box .link:first-child {
+  margin-right: 3rem;
+}
+
+header .nav .link-box .link:hover {
+  cursor: pointer;
+  color: black;
+}
+
+header .nav .link-box .link:hover::after {
+  content: "";
+  background-color: #feaa3f;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  left: 0;
+}
+
+header .nav .date-input-box {
+  display: none;
+}
+
+header .nav .date-input-box--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav .date-input-box input {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #feaa3f;
+  padding: 0.1rem 1rem;
+  border-radius: 4px;
+  color: #d7d8d9;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+header .nav .date-input-box button {
+  width: 60px;
+  height: 30px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-left: 2rem;
+  background-color: white;
+  color: #d7d8d9;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav .date-input-box button:hover {
+  -webkit-transform: translateX(-0.5rem);
+          transform: translateX(-0.5rem);
+  border-bottom: 1px solid #feaa3f;
+  color: #feaa3f;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(100% - 8rem);
+}
+
+main h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 8rem;
+  margin-top: 3rem;
+}
+
+main .holidays-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100vh - 4rem* 2 - 70px);
+  width: calc(100% - 4rem* 2);
+  overflow-y: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 4rem;
+  margin: 4rem;
+}
+
+main .holidays-list .holiday-item {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 3px solid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .holidays-list .holiday-item-main-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .holidays-list .holiday-item-main-box .holiday-item-title {
+  max-width: 95%;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #feaa3f;
+}
+
+main .holidays-list .holiday-item-main-box .holiday-item-date {
+  font-size: 16px;
+  color: #d7d8d9;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+main .holidays-list .holiday-item-main-box .holiday-item-date-weekday {
+  font-size: 14px;
+  color: #d7d8d9;
+  font-weight: 400;
+}
+
+main .holidays-list .holiday-item-details-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+  font-weight: 300;
+}
+/*# sourceMappingURL=global.css.map */

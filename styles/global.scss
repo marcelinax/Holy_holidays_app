@@ -1,0 +1,117 @@
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  @include default-padding-margin;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: $body-bg;
+}
+header {
+  height: 70px;
+  background-color: $default-bg;
+
+  .nav {
+    @include flex-center;
+    @include nav-size;
+    margin: 0 $nav-margin;
+    justify-content: space-between;
+
+    .logo {
+      @include nav-logo;
+    }
+    .link-box {
+      @include flex-center;
+      position: relative;
+
+      .link {
+        @include nav-link;
+        position: relative;
+        &:first-child {
+          margin-right: $nav-link-margin;
+        }
+        &:hover {
+          cursor: pointer;
+          color: $default-color;
+          &::after {
+            @include link-hover;
+          }
+        }
+      }
+    }
+
+    .date-input-box {
+      display: none;
+      &--active {
+        @include flex-center;
+      }
+      input {
+        @include input;
+      }
+      button {
+        @include button;
+        @include flex-center;
+        &:hover {
+          @include button-hover;
+        }
+      }
+    }
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: calc(100% - 8rem);
+  h1 {
+    @include main-title;
+  }
+
+  .holidays-list {
+    display: flex;
+    @include holidays-list-size;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 $holidays-list-padding;
+    margin: $holidays-list-margin;
+    .holiday-item {
+      @include holiday-item;
+      @include flex-column;
+      @include default-box-shadow;
+      border: 3px solid;
+      justify-content: space-between;
+      &-main-box {
+        @include flex-column;
+        .holiday-item-title {
+          max-width: 95%;
+          font-size: $holiday-item-title-font-size;
+          margin-bottom: $holiday-item-text-margin;
+          font-weight: $holiday-item-title-font-weight;
+          color: $holiday-item-title-font-color;
+        }
+        .holiday-item-date {
+          font-size: $holiday-item-date-font-size;
+          color: $holiday-item-date-font-color;
+          font-weight: $holiday-item-date-font-weight;
+          margin-bottom: 0.3rem;
+        }
+        .holiday-item-date-weekday {
+          font-size: $holiday-item-date-weekday-font-size;
+          color: $holiday-item-date-font-color;
+          font-weight: $holiday-item-date-font-weight;
+        }
+      }
+
+      &-details-box {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        font-size: $holiday-item-details-font-size;
+        font-weight: $holiday-item-details-font-weight;
+      }
+    }
+  }
+}
