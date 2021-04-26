@@ -40,8 +40,6 @@ class Holiday {
     holidayItem.style.borderColor = this.getColorForHoliday(this.color);
   }
   getColorForHoliday(color) {
-    const holidayItem = document.querySelector(".holiday-item");
-
     switch (color) {
       case "green":
         return "green";
@@ -75,7 +73,6 @@ class Holidays {
     let holidays = await this.getHolidaysFromApi();
 
     holidays.celebrations.forEach((ce) => {
-      console.log(ce);
       new Holiday(
         ce.title,
         ce.colour,

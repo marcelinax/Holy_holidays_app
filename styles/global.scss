@@ -63,7 +63,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   width: calc(100% - 8rem);
   h1 {
     @include main-title;
@@ -96,19 +95,20 @@ main {
           color: $holiday-item-date-font-color;
           font-weight: $holiday-item-date-font-weight;
           margin-bottom: 0.3rem;
+          text-align: center;
         }
         .holiday-item-date-weekday {
           font-size: $holiday-item-date-weekday-font-size;
           color: $holiday-item-date-font-color;
           font-weight: $holiday-item-date-font-weight;
+          text-align: center;
         }
       }
 
       &-details-box {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+        @include flex-column;
 
+        color: #d7d8d9;
         font-size: $holiday-item-details-font-size;
         font-weight: $holiday-item-details-font-weight;
       }

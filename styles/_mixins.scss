@@ -7,7 +7,7 @@
   padding: 0;
   margin: 0;
 }
-DWbbpzpewnie @mixin flex-column {
+@mixin flex-column {
   display: flex;
   flex-direction: column;
 }
@@ -25,12 +25,7 @@ DWbbpzpewnie @mixin flex-column {
   margin-bottom: $holiday-item-margin;
   padding: $holiday-item-padding;
 }
-@mixin holiday-list {
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  background-color: $holidays-list-bg;
-}
+
 @mixin nav-size {
   height: 100%;
   width: calc(100% - #{$nav-margin}* 2);
@@ -45,7 +40,7 @@ DWbbpzpewnie @mixin flex-column {
   height: $nav-logo-size;
 }
 @mixin holidays-list-size {
-  height: calc(100vh - #{$holidays-list-margin}* 2 - 70px);
+  height: calc(100vh - #{$holidays-list-margin}* 2 - 70px - 6rem);
   width: calc(100% - #{$holidays-list-margin}* 2);
   overflow-y: auto;
 }
@@ -77,7 +72,6 @@ DWbbpzpewnie @mixin flex-column {
 @mixin button {
   width: $btn-width;
   height: $btn-height;
-  //   border: $btn-border-size $btn-border-style $btn-border-color;
   padding: $btn-padding;
   border-radius: $btn-border-radius;
   margin-left: 2rem;

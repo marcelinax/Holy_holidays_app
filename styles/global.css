@@ -159,7 +159,7 @@ main .holidays-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: calc(100vh - 4rem* 2 - 70px);
+  height: calc(100vh - 4rem* 2 - 70px - 6rem);
   width: calc(100% - 4rem* 2);
   overflow-y: auto;
   -webkit-box-pack: start;
@@ -210,32 +210,33 @@ main .holidays-list .holiday-item-main-box .holiday-item-title {
   font-size: 20px;
   margin-bottom: 1rem;
   font-weight: 500;
-  color: #feaa3f;
+  color: black;
 }
 
 main .holidays-list .holiday-item-main-box .holiday-item-date {
   font-size: 16px;
-  color: #d7d8d9;
+  color: #feaa3f;
   font-weight: 400;
   margin-bottom: 0.3rem;
+  text-align: center;
 }
 
 main .holidays-list .holiday-item-main-box .holiday-item-date-weekday {
   font-size: 14px;
-  color: #d7d8d9;
+  color: #feaa3f;
   font-weight: 400;
+  text-align: center;
 }
 
 main .holidays-list .holiday-item-details-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #d7d8d9;
   font-size: 12px;
   font-weight: 300;
 }
